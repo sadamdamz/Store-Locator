@@ -15,5 +15,6 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.3",
     "node-geocoder": "^3.25.0"
-  }
+  },
+  "devDependencies": {}
 }
