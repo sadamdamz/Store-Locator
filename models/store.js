@@ -9,7 +9,7 @@ const StoreSchema = new mongoose.Schema({
     },
     adress:{
         type:String,
-        required:true
+        required:[true, 'add store adress']
     },
     location:{
         type: {
@@ -23,4 +23,4 @@ const StoreSchema = new mongoose.Schema({
       }
 })
 
-module.exports = StoreSchema;
+module.exports = mongoose.model('Store', StoreSchema);
