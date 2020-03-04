@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { getstores } = require('../controllers/stores');
+const { getstores, addstores } = require('../controllers/stores');
 
-router.route('/').get(getstores);
+router.route('/').get(getstores).post(addstores);
 
 module.exports = router;
