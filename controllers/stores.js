@@ -1,4 +1,5 @@
 const Store = require('../models/Store')
+// const geocode = require('../utils/geocoder')
 
 exports.getstores = async (req, res, next) => {
     try {
@@ -25,6 +26,8 @@ exports.addstores = async (req, res, next) => {
         if(error.code == 11000){
             return res.status(400).json({error:'store already exist'})
         }
+        console.log(error)
         return res.status(500).json({error:'server error'})   
     }
 }
+
